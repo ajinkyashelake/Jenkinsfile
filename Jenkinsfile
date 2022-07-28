@@ -7,7 +7,7 @@ agent any
 		stage ('copy-index') {
 
 			staps {
-				sh 'cp -r index.html /var/www/html'
+				sh 'cp -r index.html /var/www/html/'
 
 
 			}
@@ -18,7 +18,7 @@ agent any
 		stage ('copy-dev') {
 
 			staps {
-				sh 'cp -r dev.html /var/www/html'
+				sh 'cp -r dev.html /var/www/html/'
 
 
 			}
@@ -28,7 +28,7 @@ agent any
 		stage ('copy-qa') {
 
 			staps {
-				sh 'cp -r qa.html /var/www/html'
+				sh 'cp -r qa.html /var/www/html/'
 
 
 			}
@@ -38,7 +38,7 @@ agent any
 		stage ('apache-restart') {
 
 			staps {
-				sh 'service httpd start'
+				sh 'service httpd restart'
 
 
 			}
